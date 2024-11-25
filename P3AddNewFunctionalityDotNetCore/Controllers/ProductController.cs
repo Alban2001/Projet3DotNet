@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using P3AddNewFunctionalityDotNetCore.Models.Services;
 using P3AddNewFunctionalityDotNetCore.Models.ViewModels;
 using System.Collections.Generic;
@@ -11,11 +12,13 @@ namespace P3AddNewFunctionalityDotNetCore.Controllers
     {
         private readonly IProductService _productService;
         private readonly ILanguageService _languageService;
+        private readonly IStringLocalizer<ProductService> _localizer;
 
-        public ProductController(IProductService productService, ILanguageService languageService)
+        public ProductController(IProductService productService, ILanguageService languageService, IStringLocalizer<ProductService> localizer)
         {
             _productService = productService;
             _languageService = languageService;
+            _localizer = localizer;
         }
 
         public IActionResult Index()

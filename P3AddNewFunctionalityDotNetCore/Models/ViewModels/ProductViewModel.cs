@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace P3AddNewFunctionalityDotNetCore.Models.ViewModels
 {
@@ -7,14 +8,21 @@ namespace P3AddNewFunctionalityDotNetCore.Models.ViewModels
         [BindNever]
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "MissingName")]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
         public string Details { get; set; }
-
+        
+        [Required(ErrorMessage = "MissingStock")]
+        [Range(1, int.MaxValue, ErrorMessage = "QuantityNotAnInteger")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "QuantityNotGreaterThanZero")]
         public string Stock { get; set; }
 
+        [Required(ErrorMessage = "MissingPrice")]
+        [RegularExpression(@"^\d+(\.\d{1,2})?$", ErrorMessage = "PriceNotANumber")]
+        [Range(0, double.MaxValue, ErrorMessage = "PriceNotGreaterThanZero")]
         public string Price { get; set; }
     }
 }
