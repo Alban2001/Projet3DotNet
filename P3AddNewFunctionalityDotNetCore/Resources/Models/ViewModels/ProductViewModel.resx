@@ -127,13 +127,13 @@
   <data name="MissingStock" xml:space="preserve">
     <value />
   </data>
-  <data name="QuantityNotAnInteger" xml:space="preserve">
+  <data name="StockNotAnInteger" xml:space="preserve">
     <value />
   </data>
   <data name="PriceNotANumber" xml:space="preserve">
     <value />
   </data>
-  <data name="QuantitykNotGreaterThanZero" xml:space="preserve">
+  <data name="StockNotGreaterThanZero" xml:space="preserve">
     <value />
   </data>
   <data name="PriceNotGreaterThanZero" xml:space="preserve">
