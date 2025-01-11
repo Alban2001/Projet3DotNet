@@ -121,7 +121,7 @@
     <value>Veuillez renseigner un nom</value>
   </data>
   <data name="ErrorMissingAddress" xml:space="preserve">
-    <value>Veuillez renseigner une addresse</value>
+    <value>Veuillez renseigner une adresse</value>
   </data>
   <data name="ErrorMissingCity" xml:space="preserve">
     <value>Veuillez renseigner le nom d'une ville</value>
