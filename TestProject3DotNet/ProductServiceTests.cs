@@ -41,7 +41,6 @@ namespace TestProject3DotNet
             var localizer = new StringLocalizer<ProductService>(factory);
             ProductService productService = new ProductService(new Cart(), new ProductRepository(context), new OrderRepository(context), localizer);
             LanguageService languageService = new LanguageService();
-            //productService.SaveProduct(new Models.ViewModels.ProductViewModel { });
             ProductController productController = new ProductController(productService, languageService, localizer);
 
             // Act
